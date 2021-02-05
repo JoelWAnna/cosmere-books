@@ -20,6 +20,9 @@ RUN apt-get update && \
     wget \
     wkhtmltopdf \
     xvfb \
+    curl \
+    netbase \
+    zip \
     zlib1g-dev \
     && gem install bundler \
     && bundle install \
