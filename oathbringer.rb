@@ -13,7 +13,7 @@ links = [
   '08/29/oathbringer-brandon-sanderson-chapter-1-3/',
   '09/05/oathbringer-by-brandon-sanderson-chapters-4-6/'
 ]
-
+# https://www.tor.com/series/oathbringer/
 # Automatically adds all recent chapters
 puts 'Downloading all found links'
 chapter = Integer(links.last.split('-').last.gsub(/[^0-9]/, '')) + 1
@@ -26,7 +26,7 @@ loop do
   ending_chapter = [chapter + 2, 32].min
   links << "#{next_date.strftime('%m')}/#{next_date.strftime('%d')}/oathbringer-by-brandon-sanderson-chapters-#{chapter}-#{ending_chapter}/"
   chapter += 3
-  break if next_date + 7 > Date.today
+  break if next_date + 7 > Date.new(2017, 11, 7)
 end
 next_date += 7
 
